@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SearchService } from '../search/search.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-homepage',
@@ -8,66 +9,22 @@ import { SearchService } from '../search/search.service';
 })
 export class HomepageComponent {
   appliedFilters: string[] = [];
+  resources: any[];
 
-  resources: any[] = [
-    {
-      type: 'Type 1',
-      primary: 'Primary 1',
-      subject: 'Math',
-      title: 'Resource 1',
-    },
-    {
-      type: 'Type 2',
-      primary: 'Primary 2',
-      subject: 'Science',
-      title: 'Resource 2',
-    },
-    {
-      type: 'Type 3',
-      primary: 'Primary 3',
-      subject: 'English',
-      title: 'Resource 3',
-    },
-    // Add more dummy data for additional tiles
-    {
-      type: 'Type 1',
-      primary: 'Primary 1',
-      subject: 'Math',
-      title: 'Resource 4',
-    },
-    {
-      type: 'Type 2',
-      primary: 'Primary 2',
-      subject: 'Science',
-      title: 'Resource 5',
-    },
-    {
-      type: 'Type 3',
-      primary: 'Primary 3',
-      subject: 'English',
-      title: 'Resource 6',
-    },
-    {
-      type: 'Type 1',
-      primary: 'Primary 1',
-      subject: 'Math',
-      title: 'Resource 7',
-    },
-    {
-      type: 'Type 2',
-      primary: 'Primary 2',
-      subject: 'Science',
-      title: 'Resource 8',
-    },
-    {
-      type: 'Type 3',
-      primary: 'Primary 3',
-      subject: 'English',
-      title: 'Resource 9',
-    },
-  ];
+  constructor(private searchService: SearchService, private http: HttpClient) {
+    this.fetchResources();
+  }
 
-  constructor(private searchService: SearchService) {}
+  fetchResources(): void {
+    this.http.get<any[]>('assets/resources.json').subscribe(
+      (data) => {
+        this.resources = data;
+      },
+      (error) => {
+        console.error('Error fetching resources:', error);
+      }
+    );
+  }
 
   onSearch(query: string): void {
     this.searchService.search(query);

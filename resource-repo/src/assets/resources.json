@@ -1,0 +1,98 @@
+[
+  {
+    "type": "Worksheet",
+    "primary": "Primary 1",
+    "subject": "Math",
+    "title": "Worksheet on Addition",
+    "rating": 3.5,
+    "reviewsCount": 643
+  },
+  {
+    "type": "Exercise",
+    "primary": "Primary 2",
+    "subject": "Science",
+    "title": "Exercise on Parts of Plants",
+    "rating": 3,
+    "reviewsCount": 218
+  },
+  {
+    "type": "Game",
+    "primary": "Primary 3",
+    "subject": "English",
+    "title": "Game on Verbs",
+    "rating": 4,
+    "reviewsCount": 795
+  },
+  {
+    "type": "Worksheet",
+    "primary": "Primary 1",
+    "subject": "English",
+    "title": "Worksheet on Grammar",
+    "rating": 4.5,
+    "reviewsCount": 402
+  },
+  {
+    "type": "Activity",
+    "primary": "Primary 2",
+    "subject": "Math",
+    "title": "Activity on Shapes",
+    "rating": 2.5,
+    "reviewsCount": 912
+  },
+  {
+    "type": "Quiz",
+    "primary": "Primary 3",
+    "subject": "Science",
+    "title": "Quiz on Matter",
+    "rating": 4.8,
+    "reviewsCount": 57
+  },
+  {
+    "type": "Game",
+    "primary": "Primary 1",
+    "subject": "English",
+    "title": "Game on Spelling",
+    "rating": 3.7,
+    "reviewsCount": 332
+  },
+  {
+    "type": "Worksheet",
+    "primary": "Primary 2",
+    "subject": "Math",
+    "title": "Worksheet on Subtraction",
+    "rating": 3.2,
+    "reviewsCount": 759
+  },
+  {
+    "type": "Exercise",
+    "primary": "Primary 3",
+    "subject": "Science",
+    "title": "Exercise on Electricity",
+    "rating": 4.2,
+    "reviewsCount": 168
+  },
+  {
+    "type": "Activity",
+    "primary": "Primary 1",
+    "subject": "English",
+    "title": "Activity on Vocabulary",
+    "rating": 4.6,
+    "reviewsCount": 523
+  },
+  {
+    "type": "Quiz",
+    "primary": "Primary 2",
+    "subject": "Math",
+    "title": "Quiz on Multiplication",
+    "rating": 3.9,
+    "reviewsCount": 953
+  },
+  {
+    "type": "Game",
+    "primary": "Primary 3",
+    "subject": "Science",
+    "title": "Game on Ecosystems",
+    "rating": 4.5,
+    "reviewsCount": 190
+  }
+]

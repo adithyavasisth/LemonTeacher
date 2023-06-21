@@ -10,10 +10,15 @@ export class PostTileComponent {
     title: string;
     content: string;
     likes: number;
+    isLiked: boolean;
   };
 
   likePost(): void {
-    // Implement your logic for liking the post
-    this.post.likes++;
+    if (this.post.isLiked) {
+      this.post.likes--;
+    } else {
+      this.post.likes++;
+    }
+    this.post.isLiked = !this.post.isLiked;
   }
 }

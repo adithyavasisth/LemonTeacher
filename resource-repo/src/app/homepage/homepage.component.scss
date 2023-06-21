@@ -1,5 +1,6 @@
 .container {
-  height: 100vh; /* Set the desired height for the container */
+  height: calc(100vh - 246px); /* Set the desired height for the container */
+  display: flex;
 
   .filter-column {
     background-color: #f5f5f5;

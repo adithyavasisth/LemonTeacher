@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
@@ -11,6 +14,8 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +30,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { TileComponent } from './homepage/tile/tile.component';
 import { PostTileComponent } from './forum/post-tile/post-tile.component';
+import { DragDropDirective } from './upload/drag-drop.directive';
 
 @NgModule({
   declarations: [
@@ -38,12 +44,15 @@ import { PostTileComponent } from './forum/post-tile/post-tile.component';
     SearchComponent,
     TileComponent,
     PostTileComponent,
+    DragDropDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
+    DragDropModule,
     MatInputModule,
     MatToolbarModule,
     MatListModule,
@@ -54,6 +63,7 @@ import { PostTileComponent } from './forum/post-tile/post-tile.component';
     MatSelectModule,
     MatChipsModule,
     MatSidenavModule,
+    MatRadioModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

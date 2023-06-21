@@ -1,5 +1,5 @@
 .container {
-  height: 100vh; /* Set the desired height for the container */
+  height: calc(100vh - 246px); /* Set the desired height for the container */
 
   .filter-column {
     background-color: #f5f5f5;
@@ -9,19 +9,16 @@
 
   .tile-column {
     padding: 20px;
-    width: 80%;
+    width: auto;
     overflow-y: auto; /* Enable vertical scrolling if needed */
   }
 
   .grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    width: auto;
   }
 
   .grid-item {
-    width: calc(33.33% - 20px);
+    width: auto;
     margin-bottom: 20px;
   }
 }

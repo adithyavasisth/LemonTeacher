@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Engaging Activities for Preschoolers",
+    "content": "Hello fellow teachers! I wanted to share some of the engaging activities that I use with my preschoolers. These activities have proven to be effective in keeping the little ones interested and focused. Feel free to try them out and let me know your thoughts!",
+    "likes": 10,
+    "isLiked": false
+  },
+  {
+    "title": "Teaching Phonics to Kindergartners",
+    "content": "Hi everyone! I've discovered a fun and interactive way to teach phonics to kindergartners. By incorporating games and hands-on activities, my students have shown remarkable progress in their reading skills. I'd love to hear your experiences and any additional tips you might have!",
+    "likes": 5,
+    "isLiked": true
+  },
+  {
+    "title": "Classroom Management Strategies for Young Learners",
+    "content": "Calling all teachers of young learners! Classroom management can be quite challenging with energetic kids. I've implemented a few strategies in my classroom that have helped maintain a positive and focused learning environment. Let's share our best practices and support each other in creating an optimal learning atmosphere.",
+    "likes": 3,
+    "isLiked": false
+  },
+  {
+    "title": "Tips for Encouraging Creativity in Early Childhood Education",
+    "content": "Hello fellow educators! Creativity plays a vital role in early childhood education. I've been incorporating various activities and techniques to nurture creativity in my students. Let's exchange ideas and discuss how we can foster a creative mindset among our little ones.",
+    "likes": 56,
+    "isLiked": false
+  },
+  {
+    "title": "Effective Strategies for Teaching Math to Preschoolers",
+    "content": "Math can be a challenging subject for preschoolers, but with the right strategies, we can make it enjoyable and engaging. I've been using hands-on activities, visual aids, and interactive games to introduce math concepts to my students. Let's collaborate and share our tried-and-tested methods for teaching math to young children.",
+    "likes": 17,
+    "isLiked": true
+  }
+]

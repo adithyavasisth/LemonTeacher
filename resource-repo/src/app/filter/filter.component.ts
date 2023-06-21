@@ -6,9 +6,16 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./filter.component.scss'],
 })
 export class FilterComponent {
-  subjects: string[] = ['Math', 'Science', 'English'];
+  subjects: string[] = [
+    'Math',
+    'Science',
+    'English',
+    'General',
+    'Malay',
+    'Other',
+  ];
   primaries: string[] = ['Primary 1', 'Primary 2', 'Primary 3'];
-  types: string[] = ['Type 1', 'Type 2', 'Type 3'];
+  types: string[] = ['Worksheet', 'Exercise', 'Game', 'Video', 'Other'];
 
   selectedSubject: string[] = [];
   selectedPrimary: string[] = [];

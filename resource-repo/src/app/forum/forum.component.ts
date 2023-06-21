@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { SearchService } from '../search/search.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-forum',
@@ -8,27 +9,22 @@ import { SearchService } from '../search/search.service';
 })
 export class ForumComponent {
   appliedFilters: string[] = [];
+  posts: any[];
 
-  posts: any[] = [
-    {
-      title: 'Post 1',
-      content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      likes: 10
-    },
-    {
-      title: 'Post 2',
-      content: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      likes: 5
-    },
-    {
-      title: 'Post 3',
-      content: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
-      likes: 3
-    }
-  ];
+  constructor(private searchService: SearchService, private http: HttpClient) {
+    this.fetchPosts();
+  }
 
-
-  constructor(private searchService: SearchService) {}
+  fetchPosts(): void {
+    this.http.get<any[]>('assets/posts.json').subscribe(
+      (data) => {
+        this.posts = data;
+      },
+      (error) => {
+        console.error('Error fetching posts:', error);
+      }
+    );
+  }
 
   onSearch(query: string): void {
     this.searchService.search(query);

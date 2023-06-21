@@ -7,4 +7,10 @@
     <p>Subject: {{ subject }}</p>
     <p>Type: {{ type }}</p>
   </mat-card-content>
+  <mat-card-actions>
+    <ng-container *ngFor="let star of stars">
+      <mat-icon [ngClass]="{ 'filled': star }">star</mat-icon>
+    </ng-container>
+    <span class="reviews-count">({{ reviewsCount || 0 }})</span>
+  </mat-card-actions>
 </mat-card>

@@ -1,1 +1,61 @@
-<p>upload works!</p>
+<mat-card class="form-card">
+  <form (submit)="onSubmit()">
+    <div class="upload">
+      <mat-radio-group [(ngModel)]="selectedOption" name="selectedOption">
+        <mat-radio-button value="file">Upload PDF</mat-radio-button>
+        <mat-radio-button value="link">Link</mat-radio-button>
+      </mat-radio-group>
+
+      <div *ngIf="selectedOption === 'file'">
+        <div class="file-drop-area" appDragDrop (fileDropped)="onFileDropped($event)">
+          <div class="file-drop-text">
+            Drag and drop files here or
+            <input #fileInput type="file" (change)="onFileChange($event)" multiple style="display: none" cdkDragHandle />
+            <button mat-raised-button color="primary" (click)="openFilePicker($event)">Browse</button>
+          </div>
+          <div class="file-name" *ngIf="fileName">
+            {{ fileName }}
+          </div> <!-- Display the file name -->
+        </div>
+      </div>
+
+      <div *ngIf="selectedOption === 'link'">
+        <mat-form-field>
+          <mat-label>Link:</mat-label>
+          <input matInput [(ngModel)]="material.link" name="link" />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <mat-form-field>
+      <mat-label>Type:</mat-label>
+      <input matInput [(ngModel)]="material.type" name="type" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Primary:</mat-label>
+      <input matInput [(ngModel)]="material.primary" name="primary" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Subject:</mat-label>
+      <input matInput [(ngModel)]="material.subject" name="subject" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Title:</mat-label>
+      <input matInput [(ngModel)]="material.title" name="title" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Details:</mat-label>
+      <textarea
+        matInput
+        [(ngModel)]="material.details"
+        name="details"
+      ></textarea>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="primary">Upload</button>
+  </form>
+</mat-card>
