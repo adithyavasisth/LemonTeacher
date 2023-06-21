@@ -1,0 +1,54 @@
+<mat-card>
+  <mat-card-actions>
+    <button mat-button color="primary" (click)="applyFilters()">
+      Apply Filters
+    </button>
+    <mat-chip-listbox>
+      <mat-chip
+        *ngFor="let filter of appliedFilters"
+        removable
+        (removed)="removeFilter(filter)"
+      >
+        {{ filter }}
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+    </mat-chip-listbox>
+  </mat-card-actions>
+
+  <mat-card-content>
+    <div class="filters">
+      <div class="filter-field">
+        <mat-form-field>
+          <mat-label>Subject</mat-label>
+          <mat-select [(ngModel)]="selectedSubject" multiple (selectionChange)="applyFilters()">
+            <mat-option *ngFor="let subject of subjects" [value]="subject">
+              {{ subject }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="filter-field">
+        <mat-form-field>
+          <mat-label>Primary</mat-label>
+          <mat-select [(ngModel)]="selectedPrimary" multiple (selectionChange)="applyFilters()">
+            <mat-option *ngFor="let primary of primaries" [value]="primary">
+              {{ primary }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="filter-field">
+        <mat-form-field>
+          <mat-label>Type</mat-label>
+          <mat-select [(ngModel)]="selectedType" multiple (selectionChange)="applyFilters()">
+            <mat-option *ngFor="let type of types" [value]="type">
+              {{ type }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

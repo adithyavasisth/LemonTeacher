@@ -1,0 +1,20 @@
+<app-search (searchEvent)="onSearch($event)"></app-search>
+
+<mat-sidenav-container class="container">
+  <mat-sidenav mode="side" opened class="filter-column">
+    <app-filter (appliedFiltersChange)="onAppliedFiltersChange($event)"></app-filter>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="tile-column">
+    <div class="grid-container" fxLayout="row wrap" fxLayoutGap="20px">
+      <div class="grid-item" fxFlex="calc(33.33% - 20px)" *ngFor="let resource of resources">
+        <app-tile
+          [type]="resource.type"
+          [primary]="resource.primary"
+          [subject]="resource.subject"
+          [title]="resource.title"
+        ></app-tile>
+      </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

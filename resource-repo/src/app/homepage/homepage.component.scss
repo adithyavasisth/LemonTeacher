@@ -1,0 +1,27 @@
+.container {
+  height: 100vh; /* Set the desired height for the container */
+
+  .filter-column {
+    background-color: #f5f5f5;
+    padding: 20px;
+    width: 20%;
+  }
+
+  .tile-column {
+    padding: 20px;
+    width: 80%;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+  }
+
+  .grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .grid-item {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+  }
+}

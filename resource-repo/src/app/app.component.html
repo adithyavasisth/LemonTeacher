@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span> Lemon Teacher </span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/user">
+      <mat-icon>person</mat-icon>
+      User
+    </button>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="menu-row">
+    <button mat-button routerLink="/home">
+      <mat-icon>home</mat-icon>
+      Home
+    </button>
+    <button mat-button routerLink="/forum">
+      <mat-icon>forum</mat-icon>
+      Forum
+    </button>
+    <button mat-button routerLink="/upload">
+      <mat-icon>cloud_upload</mat-icon>
+      Upload
+    </button>
+    <button mat-button routerLink="/professional-opportunities">
+      <mat-icon>business</mat-icon>
+      Professional Opportunities
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>
