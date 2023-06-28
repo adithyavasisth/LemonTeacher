@@ -30,16 +30,25 @@ export class FilterComponent {
     if (index !== -1) {
       this.appliedFilters.splice(index, 1);
       const [filterType, filterValue] = filter.split(': ');
+      const filterValues = filterValue.split(', ');
       if (filterType === 'Subject') {
-        this.selectedSubject = this.selectedSubject.filter((subject) => subject !== filterValue);
+        filterValues.forEach((value) => {
+          this.selectedSubject = this.selectedSubject.filter((subject) => subject !== value);
+        });
       }
       if (filterType === 'Primary') {
-        this.selectedPrimary = this.selectedPrimary.filter((primary) => primary !== filterValue);
+        filterValues.forEach((value) => {
+          this.selectedPrimary = this.selectedPrimary.filter((primary) => primary !== value);
+        });
       }
       if (filterType === 'Type') {
-        this.selectedType = this.selectedType.filter((type) => type !== filterValue);
+        filterValues.forEach((value) => {
+          this.selectedType = this.selectedType.filter((type) => type !== value);
+        });
       }
     }
+
+    this.appliedFiltersChange.emit(this.appliedFilters);
   }
 
 
