@@ -1,22 +1,23 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
+    <img class="logo" src="assets/logo.png" alt="Logo">
     <span> Lemon Teacher </span>
     <span class="spacer"></span>
-    <button mat-button routerLink="/user">
+    <button mat-button routerLink="/user" routerLinkActive="active">
       <mat-icon>person</mat-icon>
       User
     </button>
   </mat-toolbar-row>
   <mat-toolbar-row class="menu-row">
-    <button mat-button routerLink="/home">
+    <button mat-button routerLink="/home" routerLinkActive="active">
       <mat-icon>home</mat-icon>
       Home
     </button>
-    <button mat-button routerLink="/forum">
+    <button mat-button routerLink="/forum" routerLinkActive="active">
       <mat-icon>forum</mat-icon>
       Forum
     </button>
-    <button mat-button routerLink="/upload">
+    <button mat-button routerLink="/upload" routerLinkActive="active">
       <mat-icon>cloud_upload</mat-icon>
       Upload
     </button>

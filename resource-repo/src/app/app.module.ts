@@ -33,6 +33,7 @@ import { TileComponent } from './homepage/tile/tile.component';
 import { PostTileComponent } from './forum/post-tile/post-tile.component';
 import { DragDropDirective } from './upload/drag-drop.directive';
 import { ResourceComponent } from './resource/resource.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { ResourceComponent } from './resource/resource.component';
     PostTileComponent,
     DragDropDirective,
     ResourceComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

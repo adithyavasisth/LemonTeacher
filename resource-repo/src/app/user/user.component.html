@@ -1,0 +1,109 @@
+<div class="container">
+  <div class="left-section">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>User Options</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-nav-list>
+          <a
+            mat-list-item
+            (click)="selectOption('profile')"
+            [class.selected]="selectedOption === 'profile'"
+          >
+            <mat-icon>person</mat-icon>
+            Profile
+          </a>
+          <a
+            mat-list-item
+            (click)="selectOption('savedResources')"
+            [class.selected]="selectedOption === 'savedResources'"
+          >
+            <mat-icon>bookmark</mat-icon>
+            Saved Resources
+          </a>
+        </mat-nav-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="right-section">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Content</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div *ngIf="selectedOption === 'profile'">
+          <!-- Profile content goes here -->
+          <h2>Profile</h2>
+          <form>
+            <mat-form-field>
+              <mat-label>Name</mat-label>
+              <input
+                matInput
+                placeholder="Enter your name"
+                [(ngModel)]="profile.name"
+                name="name"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input
+                matInput
+                placeholder="Enter your email"
+                [(ngModel)]="profile.email"
+                name="email"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>Phone</mat-label>
+              <input
+                matInput
+                placeholder="Enter your phone number"
+                [(ngModel)]="profile.phone"
+                name="phone"
+              />
+            </mat-form-field>
+          </form>
+        </div>
+        <div *ngIf="selectedOption === 'savedResources'">
+          <!-- Saved resources content goes here -->
+          <h2>Saved Resources</h2>
+          <app-search (searchEvent)="onSearch($event)"></app-search>
+
+          <mat-sidenav-container class="container">
+            <mat-sidenav mode="side" opened class="filter-column">
+              <app-filter
+                (appliedFiltersChange)="onAppliedFiltersChange($event)"
+              ></app-filter>
+            </mat-sidenav>
+
+            <mat-sidenav-content class="tile-column">
+              <div
+                class="grid-container"
+                fxLayout="row wrap"
+                fxLayoutGap="20px"
+              >
+                <div
+                  class="grid-item"
+                  fxFlex="calc(33.33% - 20px)"
+                  *ngFor="let resource of filteredResources"
+                >
+                  <app-tile
+                    [type]="resource.type"
+                    [primary]="resource.primary"
+                    [subject]="resource.subject"
+                    [title]="resource.title"
+                    [rating]="resource.rating"
+                    [reviewsCount]="resource.reviewsCount"
+                    (click)="onTileClick(resource.id)"
+                  ></app-tile>
+                </div>
+              </div>
+            </mat-sidenav-content>
+          </mat-sidenav-container>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
