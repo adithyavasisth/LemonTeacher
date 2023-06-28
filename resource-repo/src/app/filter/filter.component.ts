@@ -29,8 +29,19 @@ export class FilterComponent {
     const index = this.appliedFilters.indexOf(filter);
     if (index !== -1) {
       this.appliedFilters.splice(index, 1);
+      const [filterType, filterValue] = filter.split(': ');
+      if (filterType === 'Subject') {
+        this.selectedSubject = this.selectedSubject.filter((subject) => subject !== filterValue);
+      }
+      if (filterType === 'Primary') {
+        this.selectedPrimary = this.selectedPrimary.filter((primary) => primary !== filterValue);
+      }
+      if (filterType === 'Type') {
+        this.selectedType = this.selectedType.filter((type) => type !== filterValue);
+      }
     }
   }
+
 
   applyFilters(): void {
     this.appliedFilters = [];

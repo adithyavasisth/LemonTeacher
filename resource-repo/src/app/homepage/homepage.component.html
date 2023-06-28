@@ -7,7 +7,7 @@
 
   <mat-sidenav-content class="tile-column">
     <div class="grid-container" fxLayout="row wrap" fxLayoutGap="20px">
-      <div class="grid-item" fxFlex="calc(33.33% - 20px)" *ngFor="let resource of resources">
+      <div class="grid-item" fxFlex="calc(33.33% - 20px)" *ngFor="let resource of filteredResources">
         <app-tile
           [type]="resource.type"
           [primary]="resource.primary"
@@ -15,6 +15,7 @@
           [title]="resource.title"
           [rating]="resource.rating"
           [reviewsCount]="resource.reviewsCount"
+          (click)="onTileClick(resource.id)"
         ></app-tile>
       </div>
     </div>

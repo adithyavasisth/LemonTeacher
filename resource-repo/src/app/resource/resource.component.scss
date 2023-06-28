@@ -1,0 +1,95 @@
+mat-card {
+  min-width: 600px;
+  margin: 20px;
+  padding: 20px;
+
+  h3 {
+    margin: 0;
+    font-size: 24px;
+  }
+
+  p {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: #1976d2;
+    text-decoration: none;
+  }
+}
+
+mat-card-actions {
+  display: flex;
+  align-items: center;
+
+  div {
+    display: flex;
+    align-items: center;
+
+    .star-icon {
+      font-size: 24px;
+
+      &.active {
+        color: gold; /* Set the color of the inactive star */
+      }
+    }
+
+    span {
+      margin-right: 5px;
+      font-weight: bold;
+    }
+
+    .bookmark-icon {
+      fill: none;
+    }
+  }
+}
+
+.comments {
+  margin-bottom: 20px;
+
+  .mat-card-title {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .comment-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    textarea {
+      flex: 1;
+      margin-right: 10px;
+    }
+  }
+
+  .comment-list {
+    .comment-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .comment-profile {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+
+        mat-icon {
+          font-size: 24px;
+        }
+      }
+
+      .comment-content {
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .no-comments {
+    font-style: italic;
+    color: gray;
+  }
+}

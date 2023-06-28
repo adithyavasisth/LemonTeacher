@@ -1,98 +1,145 @@
 [
   {
+    "id": 1,
     "type": "Worksheet",
     "primary": "Primary 1",
     "subject": "Math",
     "title": "Worksheet on Addition",
     "rating": 3.5,
-    "reviewsCount": 643
+    "reviewsCount": 643,
+    "linkToResource": "https://bit.ly/link-to-resource",
+    "pdfLink": "https://uploads-ssl.webflow.com/5ae15464fe16ad7f9a6faaea/5bba879a28dfc3221c95cd69_Free%20addition%20and%20subtraction%20worksheets.pdf",
+    "description": "This worksheet focuses on addition problems for primary students."
   },
   {
+    "id": 2,
     "type": "Exercise",
     "primary": "Primary 2",
     "subject": "Science",
     "title": "Exercise on Parts of Plants",
     "rating": 3,
-    "reviewsCount": 218
+    "reviewsCount": 218,
+    "linkToResource": "https://bit.ly/link-to-resource",
+    "pdfLink": "https://uploads-ssl.webflow.com/5ae15464fe16ad7f9a6faaea/5bba879a28dfc3221c95cd69_Free%20addition%20and%20subtraction%20worksheets.pdf",
+    "description": "In this exercise, students will learn about the different parts of plants and their functions."
   },
   {
+    "id": 3,
     "type": "Game",
     "primary": "Primary 3",
     "subject": "English",
     "title": "Game on Verbs",
     "rating": 4,
-    "reviewsCount": 795
+    "reviewsCount": 795,
+    "linkToResource": "https://bit.ly/link-to-resource",
+    "pdfLink": "https://uploads-ssl.webflow.com/5ae15464fe16ad7f9a6faaea/5bba879a28dfc3221c95cd69_Free%20addition%20and%20subtraction%20worksheets.pdf",
+    "description": "This interactive game helps students practice identifying and using verbs in sentences."
   },
   {
+    "id": 4,
     "type": "Worksheet",
     "primary": "Primary 1",
     "subject": "English",
     "title": "Worksheet on Grammar",
     "rating": 4.5,
-    "reviewsCount": 402
+    "reviewsCount": 402,
+    "linkToResource": "https://bit.ly/link-to-resource",
+    "pdfLink": "https://uploads-ssl.webflow.com/5ae15464fe16ad7f9a6faaea/5bba879a28dfc3221c95cd69_Free%20addition%20and%20subtraction%20worksheets.pdf",
+    "description": "This grammar worksheet covers various topics, including nouns, verbs, and adjectives."
   },
   {
+    "id": 5,
     "type": "Activity",
     "primary": "Primary 2",
     "subject": "Math",
     "title": "Activity on Shapes",
     "rating": 2.5,
-    "reviewsCount": 912
+    "reviewsCount": 912,
+    "linkToResource": "https://bit.ly/link-to-resource",
+    "pdfLink": "https://uploads-ssl.webflow.com/5ae15464fe16ad7f9a6faaea/5bba879a28dfc3221c95cd69_Free%20addition%20and%20subtraction%20worksheets.pdf",
+    "description": "In this activity, students will explore different shapes and their properties through hands-on tasks."
   },
   {
+    "id": 6,
     "type": "Quiz",
     "primary": "Primary 3",
     "subject": "Science",
     "title": "Quiz on Matter",
     "rating": 4.8,
-    "reviewsCount": 57
+    "reviewsCount": 57,
+    "linkToResource": "https://bit.ly/link-to-resource",
+    "pdfLink": "https://uploads-ssl.webflow.com/5ae15464fe16ad7f9a6faaea/5bba879a28dfc3221c95cd69_Free%20addition%20and%20subtraction%20worksheets.pdf",
+    "description": "Test your knowledge about different states of matter and their properties with this interactive quiz."
   },
   {
+    "id": 7,
     "type": "Game",
     "primary": "Primary 1",
     "subject": "English",
     "title": "Game on Spelling",
     "rating": 3.7,
-    "reviewsCount": 332
+    "reviewsCount": 332,
+    "linkToResource": "https://bit.ly/link-to-resource",
+    "pdfLink": "https://uploads-ssl.webflow.com/5ae15464fe16ad7f9a6faaea/5bba879a28dfc3221c95cd69_Free%20addition%20and%20subtraction%20worksheets.pdf",
+    "description": "Improve your spelling skills while having fun playing this engaging spelling game."
   },
   {
+    "id": 8,
     "type": "Worksheet",
     "primary": "Primary 2",
     "subject": "Math",
     "title": "Worksheet on Subtraction",
     "rating": 3.2,
-    "reviewsCount": 759
+    "reviewsCount": 759,
+    "linkToResource": "https://bit.ly/link-to-resource",
+    "pdfLink": "https://uploads-ssl.webflow.com/5ae15464fe16ad7f9a6faaea/5bba879a28dfc3221c95cd69_Free%20addition%20and%20subtraction%20worksheets.pdf",
+    "description": "This worksheet focuses on subtraction problems, helping students practice their subtraction skills."
   },
   {
+    "id": 9,
     "type": "Exercise",
     "primary": "Primary 3",
     "subject": "Science",
     "title": "Exercise on Electricity",
     "rating": 4.2,
-    "reviewsCount": 168
+    "reviewsCount": 168,
+    "linkToResource": "https://bit.ly/link-to-resource",
+    "pdfLink": "https://uploads-ssl.webflow.com/5ae15464fe16ad7f9a6faaea/5bba879a28dfc3221c95cd69_Free%20addition%20and%20subtraction%20worksheets.pdf",
+    "description": "In this exercise, students will learn about the concepts of electricity and its practical applications."
   },
   {
+    "id": 10,
     "type": "Activity",
     "primary": "Primary 1",
     "subject": "English",
     "title": "Activity on Vocabulary",
     "rating": 4.6,
-    "reviewsCount": 523
+    "reviewsCount": 523,
+    "linkToResource": "https://bit.ly/link-to-resource",
+    "description": "Expand your vocabulary with this engaging activity that introduces new words and their meanings."
   },
   {
+    "id": 11,
     "type": "Quiz",
     "primary": "Primary 2",
     "subject": "Math",
     "title": "Quiz on Multiplication",
     "rating": 3.9,
-    "reviewsCount": 953
+    "reviewsCount": 953,
+    "linkToResource": "https://bit.ly/link-to-resource",
+    "pdfLink": "https://uploads-ssl.webflow.com/5ae15464fe16ad7f9a6faaea/5bba879a28dfc3221c95cd69_Free%20addition%20and%20subtraction%20worksheets.pdf",
+    "description": "Test your multiplication skills with this quiz that covers various multiplication concepts and techniques."
   },
   {
+    "id": 12,
     "type": "Game",
     "primary": "Primary 3",
     "subject": "Science",
     "title": "Game on Ecosystems",
     "rating": 4.5,
-    "reviewsCount": 190
+    "reviewsCount": 190,
+    "linkToResource": "https://bit.ly/link-to-resource",
+    "pdfLink": "https://uploads-ssl.webflow.com/5ae15464fe16ad7f9a6faaea/5bba879a28dfc3221c95cd69_Free%20addition%20and%20subtraction%20worksheets.pdf",
+    "description": "Learn about ecosystems and the interdependence of organisms through this exciting educational game."
   }
 ]

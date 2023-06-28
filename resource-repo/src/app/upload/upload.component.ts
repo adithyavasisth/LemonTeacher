@@ -4,31 +4,42 @@ import { DragDropDirective } from './drag-drop.directive';
 @Component({
   selector: 'app-upload',
   templateUrl: './upload.component.html',
-  styleUrls: ['./upload.component.scss']
+  styleUrls: ['./upload.component.scss'],
 })
 export class UploadComponent {
   @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>;
 
   material: {
-    type: string,
-    primary: string,
-    subject: string,
-    title: string,
-    details: string,
-    file: File,
-    link: string
+    type: string;
+    primary: string;
+    subject: string;
+    title: string;
+    description: string;
+    file: File;
+    link: string;
   } = {
     type: '',
     primary: '',
     subject: '',
     title: '',
-    details: '',
+    description: '',
     file: null,
-    link: ''
+    link: '',
   };
 
   selectedOption: string = 'file';
   fileName: string = ''; // Property to store the file name
+
+  subjects: string[] = [
+    'Math',
+    'Science',
+    'English',
+    'General',
+    'Malay',
+    'Other',
+  ];
+  primaries: string[] = ['Primary 1', 'Primary 2', 'Primary 3'];
+  types: string[] = ['Worksheet', 'Exercise', 'Game', 'Video', 'Other'];
 
   onSubmit(): void {
     // Handle the form submission here
