@@ -5,3 +5,42 @@
 button {
   margin: 0 0.5rem;
 }
+
+.chatbot-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+:host ::ng-deep .mat-dialog-container {
+  padding: 20px;
+  // Customize the dialog styling as needed
+}
+
+.chatbot-dialog {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.chatbot-title {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.chatbot-content {
+  margin-top: 20px;
+}
+
+.chatbot-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.chatbot-actions button {
+  margin-left: 10px;
+}

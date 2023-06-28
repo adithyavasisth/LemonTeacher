@@ -16,6 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -66,6 +67,7 @@ import { ResourceComponent } from './resource/resource.component';
     MatChipsModule,
     MatSidenavModule,
     MatRadioModule,
+    MatDialogModule,
     PdfViewerModule,
   ],
   providers: [],

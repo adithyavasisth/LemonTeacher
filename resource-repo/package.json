@@ -22,6 +22,8 @@
     "@angular/router": "^15.1.0",
     "ng2-pdf-viewer": "^9.1.5",
     "ngx-bar-rating": "^6.0.0",
+    "openai": "^3.3.0",
+    "openapi": "^1.0.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"

@@ -20,11 +20,27 @@
       <mat-icon>cloud_upload</mat-icon>
       Upload
     </button>
-    <button mat-button routerLink="/professional-opportunities">
+    <!-- <button mat-button routerLink="/professional-opportunities">
       <mat-icon>business</mat-icon>
       Professional Opportunities
-    </button>
+    </button> -->
   </mat-toolbar-row>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
+
+<button mat-fab class="chatbot-button" (click)="openChatbotDialog()">
+  <mat-icon>chat</mat-icon>
+</button>
+
+<ng-template #chatbotDialog let-dialogRef>
+  <div class="chatbot-dialog">
+    <h2 class="chatbot-title">Chatbot</h2>
+    <div class="chatbot-content">
+      <p>This will have a conversational chatbot - exactly like the <a href="https://chat.openai.com/">OpenAI Chatbot</a> </p>
+    </div>
+    <div class="chatbot-actions">
+      <button mat-button (click)="closeDialog()">Close</button>
+    </div>
+  </div>
+</ng-template>
