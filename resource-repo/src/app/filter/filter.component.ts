@@ -16,10 +16,12 @@ export class FilterComponent {
   ];
   primaries: string[] = ['Primary 1', 'Primary 2', 'Primary 3'];
   types: string[] = ['Worksheet', 'Exercise', 'Game', 'Video', 'Other'];
+  units: string[] = ['Unit 1', 'Unit 2', 'Unit 3', 'Unit 4', 'Unit 5'];
 
   selectedSubject: string[] = [];
   selectedPrimary: string[] = [];
   selectedType: string[] = [];
+  selectedUnit: string[] = [];
 
   appliedFilters: string[] = [];
 
@@ -33,24 +35,36 @@ export class FilterComponent {
       const filterValues = filterValue.split(', ');
       if (filterType === 'Subject') {
         filterValues.forEach((value) => {
-          this.selectedSubject = this.selectedSubject.filter((subject) => subject !== value);
+          this.selectedSubject = this.selectedSubject.filter(
+            (subject) => subject !== value
+          );
         });
       }
       if (filterType === 'Primary') {
         filterValues.forEach((value) => {
-          this.selectedPrimary = this.selectedPrimary.filter((primary) => primary !== value);
+          this.selectedPrimary = this.selectedPrimary.filter(
+            (primary) => primary !== value
+          );
         });
       }
       if (filterType === 'Type') {
         filterValues.forEach((value) => {
-          this.selectedType = this.selectedType.filter((type) => type !== value);
+          this.selectedType = this.selectedType.filter(
+            (type) => type !== value
+          );
+        });
+      }
+      if (filterType === 'Unit') {
+        filterValues.forEach((value) => {
+          this.selectedUnit = this.selectedUnit.filter(
+            (unit) => unit !== value
+          );
         });
       }
     }
 
     this.appliedFiltersChange.emit(this.appliedFilters);
   }
-
 
   applyFilters(): void {
     this.appliedFilters = [];
@@ -62,6 +76,9 @@ export class FilterComponent {
     }
     if (this.selectedType.length > 0) {
       this.appliedFilters.push(`Type: ${this.selectedType.join(', ')}`);
+    }
+    if (this.selectedUnit.length > 0) {
+      this.appliedFilters.push(`Unit: ${this.selectedUnit.join(', ')}`);
     }
 
     console.log(this.appliedFilters);

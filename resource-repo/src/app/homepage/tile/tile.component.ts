@@ -11,6 +11,7 @@ export class TileComponent {
   @Input() subject: string;
   @Input() title: string;
   @Input() rating: number;
+  @Input() unit: string;
   @Input() reviewsCount: number;
 
   stars: boolean[];

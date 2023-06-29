@@ -17,6 +17,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -70,6 +71,7 @@ import { UserComponent } from './user/user.component';
     MatSidenavModule,
     MatRadioModule,
     MatDialogModule,
+    MatCheckboxModule,
     PdfViewerModule,
   ],
   providers: [],

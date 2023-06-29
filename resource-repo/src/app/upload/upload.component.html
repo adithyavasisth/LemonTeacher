@@ -87,6 +87,23 @@
         ></textarea>
       </mat-form-field>
 
+      <mat-chip-grid #chipList>
+        <mat-chip *ngFor="let tag of material.tags" [removable]="true" (removed)="removeTag(tag)">
+          {{ tag }}
+          <mat-icon matChipRemove>cancel</mat-icon>
+        </mat-chip>
+      </mat-chip-grid>
+      <mat-form-field>
+        <mat-label>Add Tags</mat-label>
+        <input matInput [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+          (matChipInputTokenEnd)="addTag($event)" placeholder="Add a tag">
+      </mat-form-field>
+      <mat-divider></mat-divider>
+
+      <mat-checkbox [(ngModel)]="material.acknowledgement" name="acknowledgement">
+        I acknowledge that this is my own work.
+      </mat-checkbox>
+
       <div class="submit">
         <button type="submit" mat-raised-button color="primary">Upload</button>
       </div>

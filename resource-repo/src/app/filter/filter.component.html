@@ -49,6 +49,17 @@
           </mat-select>
         </mat-form-field>
       </div>
+
+      <div class="filter-field">
+        <mat-form-field>
+          <mat-label>Unit</mat-label>
+          <mat-select [(ngModel)]="selectedUnit" multiple (selectionChange)="applyFilters()">
+            <mat-option *ngFor="let unit of units" [value]="unit">
+              {{ unit }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
     </div>
   </mat-card-content>
 </mat-card>

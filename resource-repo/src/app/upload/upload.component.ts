@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { MatChipInputEvent } from '@angular/material/chips';
 import { DragDropDirective } from './drag-drop.directive';
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
 
 @Component({
   selector: 'app-upload',
@@ -17,6 +19,8 @@ export class UploadComponent {
     description: string;
     file: File;
     link: string;
+    acknowledgement: boolean;
+    tags: string[];
   } = {
     type: '',
     primary: '',
@@ -25,8 +29,11 @@ export class UploadComponent {
     description: '',
     file: null,
     link: '',
+    acknowledgement: false,
+    tags: [],
   };
 
+  separatorKeysCodes: number[] = [ENTER, COMMA];
   selectedOption: string = 'file';
   fileName: string = ''; // Property to store the file name
 
@@ -61,6 +68,29 @@ export class UploadComponent {
       console.log('File Dropped ', files);
       this.material.file = files[0];
       this.fileName = files[0].name; // Update the file name
+    }
+  }
+
+  addTag(event: MatChipInputEvent): void {
+    const input = event.input;
+    const value = event.value;
+
+    // Add the tag
+    if (value.trim()) {
+      this.material.tags.push(value.trim());
+    }
+
+    // Reset the input value
+    if (input) {
+      input.value = '';
+    }
+  }
+
+  removeTag(tag: string): void {
+    const index = this.material.tags.indexOf(tag);
+
+    if (index >= 0) {
+      this.material.tags.splice(index, 1);
     }
   }
 

@@ -79,6 +79,9 @@ export class HomepageComponent {
           if (filterType === 'Type' && !resource.type.includes(filterValue)) {
             return false; // Filter doesn't match, exclude resource
           }
+          if (filterType === 'Unit' && !resource.unit.includes(filterValue)) {
+            return false; // Filter doesn't match, exclude resource
+          }
         }
         return true; // All filters match, include resource
       }
